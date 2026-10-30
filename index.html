@@ -73,7 +73,7 @@ function create ()
 		frames: [{key: 'dude', frame: 4}],
 		frameRate: 20
 	});
-}
+
 	this.anims.create({
 		key: 'right',
 		frames: this.anims.generateFrameNumbers('dude', {start: 5, end: 8}),
@@ -83,7 +83,7 @@ function create ()
 	this.physics.add.collider(player, platforms);
 
 	cursors = this.input.keyboard.createCursorKeys();
-
+}
 function update ()
 {
 	if (cursors.left.isDown)
