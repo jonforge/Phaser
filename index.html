@@ -100,11 +100,10 @@ stars.children.iterate(function (child) {
     child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
 
 });
-	
-		function collectStar (player, star)
+}
+			function collectStar (player, star)
 	{ star.disableBody(true, true);
 	}
-}
 function update ()
 {
 	if (cursors.left.isDown)
