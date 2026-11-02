@@ -46,6 +46,8 @@ function preload ()
 	var player;
 	var cursors;
 	var stars;
+	var score = 0;
+	var scoreText = this.add.text(16, 16, 'score: 0', {fontSize: '32px', fill: '#000' });
 	
 function create ()
 {
@@ -103,6 +105,10 @@ stars.children.iterate(function (child) {
 }
 			function collectStar (player, star)
 	{ star.disableBody(true, true);
+
+	 score += 10;
+	 scoreText.setText('Score: ' + score);
+
 	}
 function update ()
 {
