@@ -47,7 +47,7 @@ function preload ()
 	var cursors;
 	var stars;
 	var score = 0;
-	var scoreText = this.add.text(16, 16, 'score: 0', {fontSize: '32px', fill: '#000' });
+	var scoreText;
 	
 function create ()
 {
@@ -103,6 +103,8 @@ stars.children.iterate(function (child) {
 
 });
 }
+	var score = 0
+	scoreText = this.add.text(16, 16, 'score: 0', {fontSize: '32px', fill: '#000' });
 			function collectStar (player, star)
 	{ star.disableBody(true, true);
 
