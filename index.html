@@ -110,18 +110,8 @@ stars.children.iterate(function (child) {
 
 });
 		
-	scoreText = this.add.text(16, 16, 'score: 0', {fontSize: '32px', fill: '#000' });
-	
-
-		 
-	 }
+	scoreText = this.add.text(16, 16, 'score: 0', {fontSize: '32px', fill: '#000' }); 
 	 
-}
-
-
-
-	
-	
 
 	}
 		function collectStar (player, star) { 
@@ -143,6 +133,7 @@ stars.children.iterate(function (child) {
 			 bomb.setCollideWorldBounds(true);
 			 bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
 	 } 
+		}
 		 
 function hitBomb (player, bomb)
 	{ 
