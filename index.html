@@ -113,12 +113,7 @@ stars.children.iterate(function (child) {
 	scoreText = this.add.text(16, 16, 'score: 0', {fontSize: '32px', fill: '#000' });
 	
 
-		 var x = player.x < 400 ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
-
-		 var bomb = bombs.create(x, 16, 'bomb');
-		 bomb.setBounce(1);
-		 bomb.setCollideWorldBounds(true);
-		 bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
+		 
 	 }
 	 
 }
@@ -134,6 +129,12 @@ stars.children.iterate(function (child) {
 
 	 score += 10;
 	 scoreText.setText('Score: ' + score);
+	 var x = player.x < 400 ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
+
+		 var bomb = bombs.create(x, 16, 'bomb');
+		 bomb.setBounce(1);
+		 bomb.setCollideWorldBounds(true);
+		 bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
 	 
 	 if (stars.countActive(true) === 0)
 	 
