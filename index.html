@@ -116,7 +116,7 @@ stars.children.iterate(function (child) {
 
 	 score += 10;
 	 scoreText.setText('Score: ' + score);
-
+	 
 	 if (stars.countActive(true) === 0)
 	 
 	 {
@@ -131,7 +131,7 @@ stars.children.iterate(function (child) {
 		 bomb.setCollideWorldBounds(true);
 		 bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
 	 }
-	 }
+	 
 }
 
 
