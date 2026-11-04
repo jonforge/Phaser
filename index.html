@@ -49,6 +49,7 @@ function preload ()
 	var score = 0;
 	var scoreText;
 	var bombs;
+	var gameOver = false;
 	
 function create ()
 {
@@ -112,6 +113,14 @@ stars.children.iterate(function (child) {
 	 scoreText.setText('Score: ' + score);
 
 	 if (stars.countActive(true) === 0)
+
+		 
+	bombs = this.physics.add.group();
+
+	this.physics.add.collider(bombs, platforms);
+
+	this.physics.add.collider(player, bombs, hitBomb, null, this);
+	 
 	 {
 		 stars.children.iterate(function (child) {
 			 child.enableBody(true, child.x, 0, true, true);
@@ -122,16 +131,11 @@ stars.children.iterate(function (child) {
 		 var bomb = bombs.create(x, 16, 'bomb');
 		 bomb.setBounce(1);
 		 bomb.setCollideWorldBounds(true);
-		 bomb.setVelocity(Phaser.Math.Between)(-200, 200), 20;
+		 bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
 	 }
 	 }
 }
 
-	bombs = this.physics.add.group();
-
-	this.physics.add.collider(bombs, platforms);
-
-	this.physics.add.collider(player, bombs, hitBomb, null, this);
 
 	
 	
